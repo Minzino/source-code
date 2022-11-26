@@ -1,0 +1,5 @@
+encrypt:
+  key-store:
+    location: file:///Users/meenzino/Desktop/개발공부/Spring-Cloud-개발자료/spring-cloud실습폴더/keystore/apiEncryptionKey.jks
+    password: Password1
+    alias: apiEncryptionKey

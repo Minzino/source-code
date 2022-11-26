@@ -1,0 +1,1 @@
+./h2.sh: line 3: 40052 Killed: 9               java -cp "$dir/h2-1.4.200.jar:$H2DRIVERS:$CLASSPATH" org.h2.tools.Console "$@"

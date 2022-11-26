@@ -1,0 +1,131 @@
+Starting a Gradle Daemon, 1 busy Daemon could not be reused, use --status for details
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :bootRunMainClassName
+
+> Task :bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.5)
+
+2022-11-12 19:09:16.082  INFO 92137 --- [           main] c.e.c.ConfigServiceApplication           : The following 1 profile is active: "native"
+2022-11-12 19:09:17.162  INFO 92137 --- [           main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2022-11-12 19:09:17.174  INFO 92137 --- [           main] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2022-11-12 19:09:17.261  INFO 92137 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d05ddf09-e215-3f3d-904b-9dbcb7871ce1
+2022-11-12 19:09:17.347  INFO 92137 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 19:09:17.354  INFO 92137 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 19:09:17.671  INFO 92137 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2022-11-12 19:09:17.680  INFO 92137 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-12 19:09:17.680  INFO 92137 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-12 19:09:17.782  INFO 92137 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-12 19:09:17.782  INFO 92137 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1660 ms
+2022-11-12 19:09:18.776  INFO 92137 --- [           main] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'application-1.springCloudBusInput' has 1 subscriber(s).
+2022-11-12 19:09:19.228  INFO 92137 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2022-11-12 19:09:19.325  INFO 92137 --- [           main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2022-11-12 19:09:19.325  INFO 92137 --- [           main] o.s.i.channel.PublishSubscribeChannel    : Channel 'application-1.errorChannel' has 1 subscriber(s).
+2022-11-12 19:09:19.326  INFO 92137 --- [           main] o.s.i.endpoint.EventDrivenConsumer       : started bean '_org.springframework.integration.errorLogger'
+2022-11-12 19:09:19.491  INFO 92137 --- [           main] c.s.b.r.p.RabbitExchangeQueueProvisioner : declaring queue for inbound: springCloudBus.anonymous.bIifJzzaQhe0FZCiaCjSpg, bound to: springCloudBus
+2022-11-12 19:09:19.493  INFO 92137 --- [           main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [127.0.0.1:5672]
+2022-11-12 19:09:19.542  INFO 92137 --- [           main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#635ff2a5:0/SimpleConnection@2b8cf049 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 60252]
+2022-11-12 19:09:19.598  INFO 92137 --- [           main] o.s.c.stream.binder.BinderErrorChannel   : Channel 'springCloudBus.anonymous.bIifJzzaQhe0FZCiaCjSpg.errors' has 1 subscriber(s).
+2022-11-12 19:09:19.599  INFO 92137 --- [           main] o.s.c.stream.binder.BinderErrorChannel   : Channel 'springCloudBus.anonymous.bIifJzzaQhe0FZCiaCjSpg.errors' has 2 subscriber(s).
+2022-11-12 19:09:19.616  INFO 92137 --- [           main] o.s.i.a.i.AmqpInboundChannelAdapter      : started bean 'inbound.springCloudBus.anonymous.bIifJzzaQhe0FZCiaCjSpg'
+2022-11-12 19:09:19.636  INFO 92137 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2022-11-12 19:09:19.668  INFO 92137 --- [           main] c.e.c.ConfigServiceApplication           : Started ConfigServiceApplication in 4.994 seconds (JVM running for 5.421)
+2022-11-12 19:10:09.811  INFO 92137 --- [nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-12 19:10:09.812  INFO 92137 --- [nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-11-12 19:10:09.814  INFO 92137 --- [nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-11-12 19:10:09.916  INFO 92137 --- [nio-8888-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/Users/meenzino/Desktop/개발공부/Spring-Cloud-개발자료/spring-cloud실습폴더/native-repo/ecommerce.yml]' via location 'file:///Users/meenzino/Desktop/개발공부/Spring-Cloud-개발자료/spring-cloud실습폴더/native-repo/'
+2022-11-12 19:10:09.916  INFO 92137 --- [nio-8888-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/Users/meenzino/Desktop/개발공부/Spring-Cloud-개발자료/spring-cloud실습폴더/native-repo/application.yml]' via location 'file:///Users/meenzino/Desktop/개발공부/Spring-Cloud-개발자료/spring-cloud실습폴더/native-repo/'
+2022-11-12 19:10:24.920  INFO 92137 --- [nio-8888-exec-3] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/Users/meenzino/Desktop/개발공부/Spring-Cloud-개발자료/spring-cloud실습폴더/native-repo/user-service.yml]' via location 'file:///Users/meenzino/Desktop/개발공부/Spring-Cloud-개발자료/spring-cloud실습폴더/native-repo/'
+2022-11-12 19:10:24.921  INFO 92137 --- [nio-8888-exec-3] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/Users/meenzino/Desktop/개발공부/Spring-Cloud-개발자료/spring-cloud실습폴더/native-repo/application.yml]' via location 'file:///Users/meenzino/Desktop/개발공부/Spring-Cloud-개발자료/spring-cloud실습폴더/native-repo/'
+2022-11-12 19:10:39.073  INFO 92137 --- [nio-8888-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/Users/meenzino/Desktop/개발공부/Spring-Cloud-개발자료/spring-cloud실습폴더/native-repo/user-service.yml]' via location 'file:///Users/meenzino/Desktop/개발공부/Spring-Cloud-개발자료/spring-cloud실습폴더/native-repo/'
+2022-11-12 19:10:39.073  INFO 92137 --- [nio-8888-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/Users/meenzino/Desktop/개발공부/Spring-Cloud-개발자료/spring-cloud실습폴더/native-repo/application.yml]' via location 'file:///Users/meenzino/Desktop/개발공부/Spring-Cloud-개발자료/spring-cloud실습폴더/native-repo/'
+2022-11-12 19:11:37.718  INFO 92137 --- [nio-8888-exec-7] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/Users/meenzino/Desktop/개발공부/Spring-Cloud-개발자료/spring-cloud실습폴더/native-repo/user-service.yml]' via location 'file:///Users/meenzino/Desktop/개발공부/Spring-Cloud-개발자료/spring-cloud실습폴더/native-repo/'
+2022-11-12 19:11:37.719  INFO 92137 --- [nio-8888-exec-7] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/Users/meenzino/Desktop/개발공부/Spring-Cloud-개발자료/spring-cloud실습폴더/native-repo/application.yml]' via location 'file:///Users/meenzino/Desktop/개발공부/Spring-Cloud-개발자료/spring-cloud실습폴더/native-repo/'
+2022-11-12 19:39:21.308  INFO 92137 --- [io-8888-exec-10] o.s.c.c.s.e.EncryptionController         : Encrypted data
+2022-11-12 19:43:45.368  WARN 92137 --- [ 127.0.0.1:5672] c.r.c.impl.ForgivingExceptionHandler     : An unexpected connection driver error occurred (Exception message: Connection reset)
+2022-11-12 19:43:45.924  INFO 92137 --- [he0FZCiaCjSpg-1] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@3e5ebdfe: tags=[[amq.ctag-5Est6Vkono5vwDvBliAHDQ]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@2e0fdc83 Shared Rabbit Connection: SimpleConnection@2b8cf049 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 60252], acknowledgeMode=AUTO local queue size=0
+2022-11-12 19:43:45.944  INFO 92137 --- [he0FZCiaCjSpg-2] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [127.0.0.1:5672]
+2022-11-12 19:43:51.037  WARN 92137 --- [he0FZCiaCjSpg-2] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused (Connection refused)
+2022-11-12 19:43:51.037  INFO 92137 --- [he0FZCiaCjSpg-2] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@3ee5474e: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2022-11-12 19:43:51.039  INFO 92137 --- [he0FZCiaCjSpg-3] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [127.0.0.1:5672]
+2022-11-12 19:43:56.133  WARN 92137 --- [he0FZCiaCjSpg-3] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused (Connection refused)
+2022-11-12 19:43:56.133  INFO 92137 --- [he0FZCiaCjSpg-3] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@3aa7f7e9: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2022-11-12 19:43:56.135  INFO 92137 --- [he0FZCiaCjSpg-4] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [127.0.0.1:5672]
+2022-11-12 19:44:01.242  WARN 92137 --- [he0FZCiaCjSpg-4] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused (Connection refused)
+2022-11-12 19:44:01.243  INFO 92137 --- [he0FZCiaCjSpg-4] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@7c53b21b: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2022-11-12 19:44:01.244  INFO 92137 --- [he0FZCiaCjSpg-5] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [127.0.0.1:5672]
+2022-11-12 19:44:06.333  WARN 92137 --- [he0FZCiaCjSpg-5] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused (Connection refused)
+2022-11-12 19:44:06.334  INFO 92137 --- [he0FZCiaCjSpg-5] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@63ff54ab: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2022-11-12 19:44:06.338  INFO 92137 --- [he0FZCiaCjSpg-6] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [127.0.0.1:5672]
+2022-11-12 19:44:11.430  WARN 92137 --- [he0FZCiaCjSpg-6] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused (Connection refused)
+2022-11-12 19:44:11.431  INFO 92137 --- [he0FZCiaCjSpg-6] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@26ea65a7: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2022-11-12 19:44:11.433  INFO 92137 --- [he0FZCiaCjSpg-7] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [127.0.0.1:5672]
+2022-11-12 19:44:16.524  WARN 92137 --- [he0FZCiaCjSpg-7] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused (Connection refused)
+2022-11-12 19:44:16.525  INFO 92137 --- [he0FZCiaCjSpg-7] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@2805d02e: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2022-11-12 19:44:16.530  INFO 92137 --- [he0FZCiaCjSpg-8] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [127.0.0.1:5672]
+2022-11-12 19:44:21.629  WARN 92137 --- [he0FZCiaCjSpg-8] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused (Connection refused)
+2022-11-12 19:44:21.631  INFO 92137 --- [he0FZCiaCjSpg-8] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@1611b11f: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2022-11-12 19:44:21.633  INFO 92137 --- [he0FZCiaCjSpg-9] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [127.0.0.1:5672]
+2022-11-12 19:44:26.742  WARN 92137 --- [he0FZCiaCjSpg-9] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused (Connection refused)
+2022-11-12 19:44:26.744  INFO 92137 --- [he0FZCiaCjSpg-9] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@25cca076: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2022-11-12 19:44:26.748  INFO 92137 --- [e0FZCiaCjSpg-10] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [127.0.0.1:5672]
+2022-11-12 19:44:31.836  WARN 92137 --- [e0FZCiaCjSpg-10] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused (Connection refused)
+2022-11-12 19:44:31.838  INFO 92137 --- [e0FZCiaCjSpg-10] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@1e1e36f7: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2022-11-12 19:44:31.842  INFO 92137 --- [e0FZCiaCjSpg-11] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [127.0.0.1:5672]
+2022-11-12 19:44:36.947  WARN 92137 --- [e0FZCiaCjSpg-11] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused (Connection refused)
+2022-11-12 19:44:36.951  INFO 92137 --- [e0FZCiaCjSpg-11] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@2b86ac67: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2022-11-12 19:44:36.954  INFO 92137 --- [e0FZCiaCjSpg-12] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [127.0.0.1:5672]
+2022-11-12 19:44:42.061  WARN 92137 --- [e0FZCiaCjSpg-12] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused (Connection refused)
+2022-11-12 19:44:42.063  INFO 92137 --- [e0FZCiaCjSpg-12] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@5b6aae46: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2022-11-12 19:44:42.066  INFO 92137 --- [e0FZCiaCjSpg-13] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [127.0.0.1:5672]
+2022-11-12 19:44:47.154  WARN 92137 --- [e0FZCiaCjSpg-13] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused (Connection refused)
+2022-11-12 19:44:47.155  INFO 92137 --- [e0FZCiaCjSpg-13] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@6b4b19e0: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2022-11-12 19:44:47.158  INFO 92137 --- [e0FZCiaCjSpg-14] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [127.0.0.1:5672]
+2022-11-12 19:44:52.247  WARN 92137 --- [e0FZCiaCjSpg-14] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused (Connection refused)
+2022-11-12 19:44:52.250  INFO 92137 --- [e0FZCiaCjSpg-14] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@4fcd0e6a: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2022-11-12 19:44:52.260  INFO 92137 --- [e0FZCiaCjSpg-15] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [127.0.0.1:5672]
+2022-11-12 19:44:57.344  WARN 92137 --- [e0FZCiaCjSpg-15] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused (Connection refused)
+2022-11-12 19:44:57.345  INFO 92137 --- [e0FZCiaCjSpg-15] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@232c4e2e: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2022-11-12 19:44:57.347  INFO 92137 --- [e0FZCiaCjSpg-16] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [127.0.0.1:5672]
+2022-11-12 19:45:02.445  WARN 92137 --- [e0FZCiaCjSpg-16] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused (Connection refused)
+2022-11-12 19:45:02.446  INFO 92137 --- [e0FZCiaCjSpg-16] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@4423059d: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2022-11-12 19:45:02.449  INFO 92137 --- [e0FZCiaCjSpg-17] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [127.0.0.1:5672]
+2022-11-12 19:45:07.550  WARN 92137 --- [e0FZCiaCjSpg-17] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused (Connection refused)
+2022-11-12 19:45:07.554  INFO 92137 --- [e0FZCiaCjSpg-17] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@5b7e7369: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2022-11-12 19:45:07.557  INFO 92137 --- [e0FZCiaCjSpg-18] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [127.0.0.1:5672]
+2022-11-12 19:45:12.647  WARN 92137 --- [e0FZCiaCjSpg-18] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused (Connection refused)
+2022-11-12 19:45:12.648  INFO 92137 --- [e0FZCiaCjSpg-18] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@528af6f7: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2022-11-12 19:45:12.649  INFO 92137 --- [e0FZCiaCjSpg-19] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [127.0.0.1:5672]
+2022-11-12 19:45:17.752  WARN 92137 --- [e0FZCiaCjSpg-19] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused (Connection refused)
+2022-11-12 19:45:17.752  INFO 92137 --- [e0FZCiaCjSpg-19] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@504b67ac: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2022-11-12 19:45:17.754  INFO 92137 --- [e0FZCiaCjSpg-20] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [127.0.0.1:5672]
+2022-11-12 19:45:17.763  INFO 92137 --- [e0FZCiaCjSpg-20] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#635ff2a5:19/SimpleConnection@7eecea5a [delegate=amqp://guest@127.0.0.1:5672/, localPort= 60831]
+2022-11-12 19:45:17.778  INFO 92137 --- [e0FZCiaCjSpg-20] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (springCloudBus.anonymous.bIifJzzaQhe0FZCiaCjSpg) durable:false, auto-delete:true, exclusive:true. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-11-12 19:46:12.923  INFO 92137 --- [nio-8888-exec-3] o.s.c.c.s.e.EncryptionController         : Encrypted data
+2022-11-12 19:46:13.828  INFO 92137 --- [nio-8888-exec-4] o.s.c.c.s.e.EncryptionController         : Encrypted data
+
+> Task :bootRun FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':bootRun'.
+> Process 'command '/Library/Java/JavaVirtualMachines/jdk-11.0.14.jdk/Contents/Home/bin/java'' finished with non-zero exit value 137
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+
+* Get more help at https://help.gradle.org
+
+BUILD FAILED in 38m 27s
+4 actionable tasks: 2 executed, 2 up-to-date
